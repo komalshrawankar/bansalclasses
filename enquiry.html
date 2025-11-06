@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENQUIRY</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+
+    <section class="courses-banner">
+        <!-- Header loads here -->
+        <div id="header"></div>
+
+        <!-- Banner Container -->
+        <div class="courses-inner">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- LEFT CONTENT -->
+                    <div class="col-12 col-md-7">
+                        <div class="courses-content">
+                            <!-- <h4>Explore All Our Classes</h4> -->
+                            <h1>Got a Questions ? <br>
+                                Lets Get You Started!</h1>
+
+                                <P class="fs-5">We’re here to help you choose the right course and guide your <br>success journey at Bansal Classes</P>
+                        </div>
+                        <div class="hero-buttons">
+                            <a href="enquiry.html" class="btn primary">Submit Your Enquiry  →</a>
+                            <!-- <a href="#" class="btn secondary">Enquire Now</a> -->
+                        </div>
+                    </div>
+
+                    <!-- RIGHT IMAGE -->
+                    <div class="col-12 col-md-5 text-center">
+                        <img src="./Images/enquirybanner.png" alt="Courses Image" class="img-fluid courses-img" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <section class="contact-section">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Left Contact Form -->
+        <div class="col-lg-7">
+          <div class="form-box">
+            <h2>Contact us </h2>
+            <p class="small text-light fs-5">Fill out the details and we’ll connect with you shortly</p>
+
+            <!-- ✅ FormSubmit Integration -->
+            <form id="contactForm" action="https://formsubmit.co/shrawankarkomal9@gamail.com" method="POST">
+              <input type="hidden" name="_captcha" value="false">
+
+              <div class="row g-3 mt-3">
+                <div class="col-md-6">
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                    <input type="text" name="Full Name" class="form-control" placeholder="Full Name" required />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                    <input type="email" name="Email" class="form-control" placeholder="Email id" required />
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
+                    <input type="text" name="Mobile Number" class="form-control" placeholder="Mobile no." required />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fa-solid fa-city"></i></span>
+                    <input type="text" name="City / Centre" class="form-control" placeholder="City / Centre" />
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fa-solid fa-book"></i></span>
+                    <input type="text" name="Class / Target Exam" class="form-control" placeholder="Class / Target Exam" />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fa-solid fa-circle-question"></i></span>
+                    <input type="text" name="Enquiry For" class="form-control" placeholder="Enquiry For" />
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <textarea name="Message" class="form-control" rows="3" placeholder="Your Message / Query"></textarea>
+                </div>
+
+                <div class="col-12 text-center">
+                  <button type="submit" class="contact-btn">Get a Call Back</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Right Contact Info -->
+        <div class="col-lg-5">
+          <div class="contact-box">
+            <div class="info-item">
+              <h3><i class="fa-solid fa-envelope"></i> Email id</h3>
+              <hr>
+              <p>Contact Email: <br>bansalclassesnagpur@gmail.com <br>contact@bansalclassesngp.com</p>
+            </div>
+
+            <div class="info-item">
+              <h3><i class="fa-solid fa-phone"></i> Call us</h3>
+              <hr>
+              <p>For Admission Enquiry: <br>+91 9270300215 <br>+91 8080588276</p>
+            </div>
+
+            <div class="info-item">
+              <h3><i class="fa-solid fa-location-dot"></i> Location</h3>
+              <hr>
+              <p>
+                Plot No 5, Old Bagadganj Rd,
+                Opp. Bharat Petrol Pump,
+                Wardhaman Nagar, Nagpur,<br>
+                Maharashtra 440008
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ Thank You Popup -->
+  <div class="thank-popup" id="thankPopup">
+    <div class="thank-popup-content">
+      <h4>Thank You!</h4>
+      <p>Your message has been sent successfully. We’ll get back to you soon.</p>
+      <button id="closePopup">OK</button>
+    </div>
+  </div>
+
+<section class="course-results-section">
+    <!-- Left Side -->
+    <div class="course-results-left">
+      <h2>Why Bansal Classes</h2>
+      <p>With a legacy of excellence, we provide an unparalleled learning environment to help students achieve their dreams.</p>
+
+      <div class="course-feature">
+        <div class="course-feature-icon"><img src="./Images/academic1.png" alt="" srcset=""></div>
+        <div class="course-feature-text">
+          <h3>40+ Years of Academic Excellence</h3>
+          <p>A trusted name in coaching for generations.</p>
+        </div>
+      </div>
+
+      <div class="course-feature">
+        <div class="course-feature-icon"><img src="./Images/medicine1.png" alt="" srcset=""></div>
+        <div class="course-feature-text">
+          <h3>India’s Most Trusted Faculty</h3>
+          <p>Learn from the best minds in the industry.</p>
+        </div>
+      </div>
+
+      <div class="course-feature">
+        <div class="course-feature-icon"><img src="./Images/mentorship1.png" alt="" srcset=""></div>
+        <div class="course-feature-text">
+          <h3>Personalized Mentorship</h3>
+          <p>Guidance tailored to each student’s needs.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Side -->
+    <div class="course-results-right">
+      <h2>Our Result Speak for Themselves</h2>
+
+      <div class="course-review">
+        <p>The faculty at Bansal Classes is exceptional. Their guidance was key to my success in JEE.</p>
+        <div class="course-review-author">Rohan Sharma<br>AIR 45, IIT-JEE</div>
+      </div>
+
+      <div class="course-review">
+        <p>The faculty at Bansal Classes is exceptional. Their guidance was key to my success in JEE.</p>
+        <div class="course-review-author">Rohan Sharma<br>AIR 45, IIT-JEE</div>
+      </div>
+
+      <a href="#" class="course-view-results ">View All Result →</a>
+    </div>
+  </section>
+
+<section class="journey-section">
+    <h2>Ready to Start Your Journey</h2>
+
+    <div class="journey-steps">
+      <div class="journey-step">
+        <div class="journey-step-circle">1</div>
+        <h3>Select Your Course</h3>
+        <p>Choose the program that fits your goal.</p>
+      </div>
+
+      <div class="journey-step">
+        <div class="journey-step-circle">2</div>
+        <h3>Fill Registration Form</h3>
+        <p>Provide your details to get started.</p>
+      </div>
+
+      <div class="journey-step">
+        <div class="journey-step-circle">3</div>
+        <h3>Complete Payment</h3>
+        <p>Secure your seat online or at our center.</p>
+      </div>
+
+      <div class="journey-step">
+        <div class="journey-step-circle">4</div>
+        <h3>Start Learning</h3>
+        <p>Access resources and attend classes.</p>
+      </div>
+    </div>
+
+    <!-- <div class="journey-divider"></div>
+
+    <div class="journey-counseling">
+      <h3>Still confused which batch fits you best?</h3>
+      <p>Talk to our Academic Counselor today for a free one-on-one session.</p>
+      <a href="#" id="journeyCallButton" class="journey-button">
+  <i class="fa-solid fa-phone-volume"></i> Book Free Counseling
+</a>
+
+    </div> -->
+    <section>
+    <div class="container py-5">
+
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h1>Our Leadership</h1>
+                <p class="fs-5 w-70">The leadership team at Bansal Classes stands as a pillar of excellence, commitment, and innovation. Together, they uphold a vision  to transform education through passion, integrity, and a student-first approach  empowering young minds to achieve extraordinary success.</p>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="lead-card text-center">
+                    <div><img src="./Images/lead1.png" alt="" srcset=""></div>
+                    <h5>Sameer Bansal</h5>
+                     <p>Managing Director & CEO</p>
+                     <p>A forward-thinking leader shaping the future of Bansal Classes with a blend of tradition and innovation. Under his guidance, the institute continues to set new benchmarks in academic excellence and student achievement.</p>
+                       <button type="button" class="btn btn-light lm">Read More →</button>
+                </div>
+            </div>
+             <div class="col-12 col-lg-4">
+                <div class="lead-card text-center">
+                    <div><img src="./Images/lead2.png" alt="" srcset=""></div>
+                    <h5>Mahima Bansal</h5>
+                     <p>Director</p>
+                     <p>A strong advocate for quality learning and student well-being. She focuses on creating an enriching, disciplined, and motivating environment that encourages holistic development and confidence in every learner.</p>
+                    <button type="button" class="btn btn-light lm">Read More →</button>
+                </div>
+            </div>
+             <div class="col-12 col-lg-4">
+                <div class="lead-card text-center">
+                    <div><img src="./Images/lead3.png" alt="" srcset=""></div>
+                    <h5>Neelam Bansal</h5>
+                     <p>Director</p>
+                     <p>A guiding presence whose values of perseverance and compassion continue to inspire the Bansal legacy. Her dedication to education and integrity serves as the foundation of trust on which the institution thrives.</p>
+                       <button type="button" class="btn btn-light lm">Read More →</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+  </section>
+
+   <section class="course-faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <p>Find answers to common queries about our courses and admission process.</p>
+
+    <div class="course-faq-item">
+      <div class="course-faq-question">
+        Which course is right for me?
+        <i class="fa-solid fa-chevron-down course-faq-icon"></i>
+      </div>
+      <div class="course-faq-answer">
+       The right course depends on your current class and target exam. For Classes 8–10, our Foundation courses are ideal. For engineering aspirants, choose JEE batches, and for medical, choose NEET batches. We recommend booking a free counseling session for personalized advice.
+    </div>
+
+    <div class="course-faq-item">
+      <div class="course-faq-question">
+        Is study material included in the course fee?
+        <i class="fa-solid fa-chevron-down course-faq-icon"></i>
+      </div>
+      <div class="course-faq-answer">
+       Yes, comprehensive and meticulously designed study material, including practice sheets, question banks, and test papers, is included in the course fee for all our programs.
+      </div>
+    </div>
+
+    <div class="course-faq-item">
+      <div class="course-faq-question">
+        Are there online batches available?
+        <i class="fa-solid fa-chevron-down course-faq-icon"></i>
+      </div>
+      <div class="course-faq-answer">
+        Yes, we offer both online and offline batches to suit your convenience and location.
+      </div>
+    </div>
+    </div>
+
+  </section>
+
+
+
+
+
+
+
+    <div id="footer"></div>
+
+    <!-- jQuery must come before load.js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap + Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/load.js"></script>
+     <script>
+    const form = document.getElementById("contactForm");
+    const popup = document.getElementById("thankPopup");
+    const closeBtn = document.getElementById("closePopup");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+
+      fetch(form.action, {
+        method: "POST",
+        body: formData,
+      })
+        .then(() => {
+          popup.style.display = "flex";
+          form.reset();
+        })
+        .catch(() => alert("Something went wrong. Please try again!"));
+    });
+
+    closeBtn.addEventListener("click", () => {
+      popup.style.display = "none";
+    });
+  </script>
+   <script>
+    // FAQ Toggle Functionality
+    const faqItems = document.querySelectorAll(".course-faq-item");
+
+    faqItems.forEach(item => {
+      const question = item.querySelector(".course-faq-question");
+      question.addEventListener("click", () => {
+        item.classList.toggle("active");
+
+        // Optional: close other open FAQs
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove("active");
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>

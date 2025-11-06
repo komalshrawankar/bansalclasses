@@ -217,7 +217,7 @@
   border-radius: 20px;
   padding: 25px 20px;
   width: 250px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+ box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease;
    text-align: start; /* ✅ align text and icons to start */
   display: flex;
@@ -505,7 +505,7 @@
 }
 .student img{
   height:400px;
-  width:400px;
+  width:500px;
   border-radius:20px;
 }
 
@@ -753,7 +753,7 @@
 
 .footer-start {
   background-color: #fff;
-  border-top: 3px solid #0096ff;
+  border-top: 2px solid #0096ff;
   border-bottom: 3px solid #0096ff;
 }
 
@@ -1684,5 +1684,438 @@
 
       .course-faq-item {
         border-radius: 20px;
+      }
+    }
+
+    /* gallery page */
+     .gallery-banner {
+    background-image: url("./Images/gallerybanner.png");
+    background-size: cover;            /* fills width nicely */
+    background-position: center center;/* centers image */
+    background-repeat: no-repeat;
+    height: calc(100vh - 80px);    
+    /* margin-top: 80px;                   */
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    color: white;
+    /* padding: 0 20px; */
+  }
+
+  /* Optional overlay for better text contrast */
+  /* .gallery-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  } */
+
+  .banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+  }
+
+  .banner-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  .banner-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .banner-content h1 {
+      font-size: 2.2rem;
+    }
+    .banner-content p {
+      font-size: 1rem;
+    }
+  }
+
+  .gallery-page .cards-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr); /* 3 per row */
+}
+
+.gallery-page .gallery-card img {
+  width: 100%;
+  height: 400px;
+  width:auto;
+  object-fit: cover;
+  /* border-radius: 10px; */
+}
+
+
+.our-legacy {
+  background-color: #0096ff;
+  color: white;
+  height:400px;
+}
+
+.our-legacy h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.our-legacy h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.our-legacy p {
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* Right-side image container */
+.our-legacy .col-md-6:last-child {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding-top: 30px; */
+}
+
+/* First image (left one) */
+.our-legacy .legacy-img {
+  /* width: 260px;
+  height: 170px; */
+  object-fit:cover;
+  border-radius: 18px;
+  transform: rotate(-5deg);
+  position: relative;
+  left: -20px;
+  z-index: 2;
+  /* box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25); */
+}
+
+/* Second image (right one, slightly overlapping) */
+.our-legacy .col-md-6:last-child img:last-child {
+  /* width: 260px;
+  height: 170px; */
+  object-fit:contain;
+  border-radius: 18px;
+  transform: rotate(0deg);
+  position: absolute;
+  /* right: 60px;
+  top: 10px; */
+  z-index: 1;
+  /* box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25); */
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .our-legacy .col-md-6:last-child {
+    flex-direction: column;
+    position: static;
+  }
+
+  .our-legacy .legacy-img,
+  .our-legacy .col-md-6:last-child img:last-child {
+    width: 90%;
+    height: auto;
+    transform: rotate(0);
+    position: static;
+    margin: 10px 0;
+    
+  }
+}
+/* moment section */
+.moments-section {
+  background-color: #fff;
+}
+
+.moments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.moment-card {
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 16/9;
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.moment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.moment-card img,
+.moment-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .moments-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .moments-grid {
+    grid-template-columns: 1fr;
+  }
+}
+   .contact-section {
+      background-color: #fff;
+      padding: 50px 0;
+    }
+
+    .contact-box {
+      background-color: #0096ff;
+      border-radius: 20px;
+      color: #fff;
+      padding: 30px;
+      height: 100%;
+    }
+
+    .form-box {
+      background-color: #0096ff;
+      border-radius: 20px;
+      color: #fff;
+      padding: 30px;
+    }
+
+    .form-box h4 {
+      font-weight: 600;
+    }
+
+    .form-box input,
+    .form-box textarea {
+      border-radius: 8px;
+      border: none;
+      padding: 10px 12px;
+      width: 100%;
+    }
+
+    .form-box input:focus,
+    .form-box textarea:focus {
+      outline: none;
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+    }
+
+    .contact-btn {
+      background-color: #007be5;
+      color: #fff;
+      font-weight: 600;
+      border: none;
+      border-radius: 30px;
+      padding: 10px 30px;
+      margin-top: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .contact-btn:hover {
+      background-color: #006ad1;
+      transform: translateY(-2px);
+    }
+
+    .info-item {
+      margin-bottom: 25px;
+    }
+
+    .info-item h6 {
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .info-item i {
+      font-size: 18px;
+      margin-right: 8px;
+     
+    }
+
+    /* Thank You Popup */
+    .thank-popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .thank-popup-content {
+      background: white;
+      border-radius: 15px;
+      padding: 40px;
+      text-align: center;
+      max-width: 400px;
+    }
+
+    .thank-popup-content h4 {
+      color: #0096ff;
+      margin-bottom: 15px;
+    }
+
+    .thank-popup-content button {
+      background-color: #0096ff;
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      padding: 10px 25px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 991px) {
+      .form-box,
+      .contact-box {
+        margin-bottom: 20px;
+      }
+    }
+  .info-item hr {
+  /* width: 50px; */
+  height: 3px;
+  background-color:white; /* white to match the blue box */
+  border: none;
+  border-radius: 2px;
+  margin: 8px 0 12px 0; /* small space above & below */
+}
+
+/* jee-xi */
+
+.courses-inner1 {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  align-items: center; /* vertically center */
+  padding: 0 40px;
+}
+
+/* COURSES BANNER BASE */
+.courses-banner1 {
+  position: relative;
+  background-image: url("./Images/backgroundbanner.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  height: 80vh; /* Full viewport height */
+}
+
+/* BLUE OVERLAY */
+.courses-banner1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 120, 198, 0.8);
+  z-index: 0;
+}
+
+.jee-banner-text{
+  font-size:50px;
+}
+
+/* --- Custom Styles --- */
+    .jee-section {
+      background: #fff;
+      border-radius: 10px;
+      /* box-shadow: 0 2px 8px rgba(0,0,0,0.1); */
+      overflow: hidden;
+      padding: 25px;
+    }
+    .jee-heading {
+      font-weight: 700;
+      /* font-size: 1rem; */
+      color: #0a0a0a;
+      margin-bottom: 10px;
+    }
+    .jee-description {
+      font-size: 0.95rem;
+      color:black;
+      margin-bottom: 20px;
+    }
+    .jee-badge {
+      background: #007bff;
+      color: #fff;
+      border-radius: 10px;
+      text-align: center;
+      padding: 15px 10px;
+      flex: 1;
+      min-width: 120px;
+    }
+    .jee-badge h6 {
+      font-size: 0.9rem;
+      margin-top: 8px;
+    }
+    .jee-badge i {
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+    }
+    .jee-subjects {
+      /* font-weight: 600; */
+      margin-bottom: 15px;
+      font-size:1.3rem;
+    }
+    .jee-rating {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    .jee-info-title {
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .jee-details {
+      /* line-height: 1.4; */
+      font-size: 1.2rem;
+      color:black;
+    }
+    .jee-blue-box {
+      background: #007bff;
+      color: #fff;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      height: 100%;
+    }
+    .jee-blue-box img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .jee-blue-box h5 {
+      margin-top: 10px;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .jee-list a {
+      display: block;
+      color: #007bff;
+      text-decoration: none;
+      margin-bottom: 6px;
+    }
+    .jee-list a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+      .jee-blue-box {
+        margin-top: 20px;
       }
     }
