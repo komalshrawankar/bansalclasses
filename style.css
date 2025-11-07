@@ -726,6 +726,8 @@
   overflow: hidden; /* merges input + button neatly */
   max-width: 500px;
   background: #fff;
+  padding: 0px;
+  height:60px;
 }
 
 .btn-subscribe {
@@ -762,7 +764,7 @@
   border: none !important;
   outline: none;
   flex: 1;
-  padding: 0px 20px;
+  padding: 0px 0px;
   font-size: 0.95rem;
   border-radius: 0; /* remove inner rounding */
 }
@@ -808,9 +810,18 @@
   background-color: #007be5;
   transform: scale(1.1);
 }
+.footer-link {
+  color: inherit;               /* takes color from parent (white in your case) */
+  text-decoration: none;        /* removes underline */
+  transition: color 0.3s ease;
+}
 
+.footer-link:hover {
+  color: #fff;                  /* keep white on hover */
+  text-decoration: underline;   /* optional hover underline */
+}
 /* Responsive */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .footer-start {
     text-align: center;
   }
@@ -831,10 +842,10 @@
     justify-content: center;
     margin-top: 10px;
   }
-}
+} */
 
 /* Responsive */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .footer-start {
     text-align: center;
   }
@@ -860,7 +871,7 @@
   .social-icons {
     justify-content: center;
   }
-}
+} */
 
 /* ABOUT PAGE HEADER */
 .about-header {
@@ -2117,5 +2128,92 @@
     @media (max-width: 768px) {
       .jee-blue-box {
         margin-top: 20px;
+      }
+    }
+
+    
+/* ✅ Responsive adjustments */
+@media (max-width: 768px) {
+  .journey h2 {
+    font-size: 1.6rem;
+  }
+
+  .journey p {
+    font-size: 0.95rem;
+  }
+
+  .d-flex.flex-column.flex-sm-row {
+    flex-direction: column !important;
+  }
+
+  .journey {
+    text-align: center;
+  }
+
+  .student {
+    margin-top: 2rem;
+  }
+  .student img{
+    height:400px;
+    width:320px;
+    margin-top:50px;
+  }
+  .img-fluid{
+    margin-top:20px;
+  }
+}
+/* footer responsive */
+/* =============== RESPONSIVE DESIGN =============== */
+    @media (max-width: 992px) {
+      .footer-start .row {
+        text-align: center;
+      }
+      .footer-start form {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .email-input {
+        border-radius: 30px;
+        width: 100%;
+      }
+      .btn-subscribe {
+        border-radius: 30px;
+        width: 100%;
+      }
+      .social-icons {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .footer-section {
+        text-align: center;
+      }
+      .footer-links li {
+        margin-bottom: 8px;
+      }
+      .footer-section h5 {
+        margin-top: 20px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .footer-logo {
+        margin: 0 auto 15px;
+      }
+      .subscription-form {
+        width: 100%;
+      }
+      .social-icons a {
+        font-size: 1rem;
+      }
+      .subscription-form{
+        display:flex;
+        flex-direction:column;
+        height:100px;
+        border-radius:35px;
+      }
+      .company-li li{
+        margin-left:0px;
       }
     }
