@@ -119,13 +119,17 @@ document.addEventListener("DOMContentLoaded", () => {
 // ✅ Gallery Tabs
 // ---------------------------
 document.addEventListener("DOMContentLoaded", () => {
-  const galleryData = {
+  const data = {
     All: [
       { img: "../Images/all1.jpg" },
       { img: "../Images/all2.jpg" },
       { img: "../Images/all3.jpg" },
       { img: "../Images/all4.jpg" },
       { img: "../Images/all5.jpg" },
+      { img: "../Images/topper1.jpg" },
+      { img: "../Images/topper2.jpg" },
+      { img: "../Images/topper3.jpg" },
+      { img: "../Images/topper4.jpg" },
     ],
     Classroom: [
       { img: "../Images/4.jpg" },
@@ -145,12 +149,12 @@ document.addEventListener("DOMContentLoaded", () => {
     ],
   };
 
-  const tabs = document.querySelectorAll(".gallery-tab");
-  const container = document.getElementById("galleryContainer");
+  const tabs = document.querySelectorAll(".tab");
+  const container = document.getElementById("cardsContainer");
 
   if (tabs.length && container) {
     const renderCards = (tab) => {
-      container.innerHTML = galleryData[tab]
+      container.innerHTML = data[tab]
         .map(
           (card) => `
         <div class="gallery-card">
@@ -162,7 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     tabs.forEach((tab) => {
       tab.addEventListener("click", () => {
-        document.querySelector(".gallery-tab.active")?.classList.remove("active");
+        document.querySelector(".tab.active")?.classList.remove("active");
         tab.classList.add("active");
         renderCards(tab.dataset.tab);
       });
