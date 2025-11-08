@@ -56,7 +56,7 @@
             <p class="small text-light fs-5">Fill out the details and we’ll connect with you shortly</p>
 
             <!-- ✅ FormSubmit Integration -->
-            <form id="contactForm" action="https://formsubmit.co/shrawankarkomal9@gamail.com" method="POST">
+            <form id="contactForm" action="https://formsubmit.co/bansalclassesnagpur@gmail.com" method="POST">
               <input type="hidden" name="_captcha" value="false">
 
               <div class="row g-3 mt-3">
@@ -331,51 +331,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+  
+    
     <!-- Custom JS -->
     <script src="js/load.js"></script>
-     <script>
-    const form = document.getElementById("contactForm");
-    const popup = document.getElementById("thankPopup");
-    const closeBtn = document.getElementById("closePopup");
-
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const formData = new FormData(form);
-
-      fetch(form.action, {
-        method: "POST",
-        body: formData,
-      })
-        .then(() => {
-          popup.style.display = "flex";
-          form.reset();
-        })
-        .catch(() => alert("Something went wrong. Please try again!"));
-    });
-
-    closeBtn.addEventListener("click", () => {
-      popup.style.display = "none";
-    });
-  </script>
-   <script>
-    // FAQ Toggle Functionality
-    const faqItems = document.querySelectorAll(".course-faq-item");
-
-    faqItems.forEach(item => {
-      const question = item.querySelector(".course-faq-question");
-      question.addEventListener("click", () => {
-        item.classList.toggle("active");
-
-        // Optional: close other open FAQs
-        faqItems.forEach(otherItem => {
-          if (otherItem !== item) {
-            otherItem.classList.remove("active");
-          }
-        });
-      });
-    });
-  </script>
-
 </body>
 
 </html>

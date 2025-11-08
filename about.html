@@ -36,7 +36,7 @@
 
             </div>
             <div class="col-12 col-md-5">
-                <div><img src="./Images/director.png" alt="" srcset=""></div>
+                <div><img src="./Images/director.png" alt="" srcset="" class="director-img"></div>
             </div>
         </div>
     </div>
@@ -265,19 +265,6 @@ Together, we aim to build not just toppers, but leaders who make a meaningful im
 
   <!-- Custom JS -->
   <script src="js/load.js"></script>
-  <script>
-  const tabs = document.querySelectorAll(".tab-btn");
-  const contents = document.querySelectorAll(".tab-content");
-
-  tabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-      tabs.forEach(t => t.classList.remove("active"));
-      contents.forEach(c => c.classList.remove("active"));
-
-      tab.classList.add("active");
-      document.getElementById(tab.dataset.tab).classList.add("active");
-    });
-  });
-</script>
+ 
 </body>
 </html>

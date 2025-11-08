@@ -5,7 +5,9 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
+html, body {
+  overflow-x: hidden;
+}
 /* Navbar */
 .navbar {
   width: 100%;
@@ -75,16 +77,18 @@
 /* Bring content above overlay */
 .hero-content {
   position: relative;
-  padding-left: 8%;
+  padding-left: 0;   /* remove extra width that caused overflow */
+  padding: 0 5%;     /* still looks good */
 
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1500px;
+  /* max-width: 1500px; */
   width: 100%;
   gap: 40px;
   flex-wrap: wrap;
+  padding-top:10px;
 }
 .hero-text {
   flex: 1;
@@ -139,10 +143,10 @@
 
 /* Right-side image */
 .hero-image img {
-  width: 550px;
+  width: 450px;
   max-width: 100%;
   border-radius: 10px;
-  /* margin-top: 100px; */
+  margin-top: 90px;
 }
 
 /* Responsive */
@@ -158,11 +162,17 @@
 
   .hero-text h1 {
     font-size: 2rem;
+    margin-bottom:30px;
   }
 
   .hero-image img {
     width: 250px;
   }
+  .hero-text p{
+    font-size:20px;
+    display:none;
+  }
+ 
 }
 
 @media (max-width: 600px) {
@@ -934,9 +944,10 @@
   margin-bottom:10px;
 }
 .expert-coaching p{
- width:300px;
-
+  max-width: 300px;
+  width: 100%;
 }
+
 .expert-coaching-img img{
   width:400px;
 }
@@ -1832,6 +1843,7 @@
   .our-legacy .col-md-6:last-child {
     flex-direction: column;
     position: static;
+    display:none;
   }
 
   .our-legacy .legacy-img,
@@ -2198,7 +2210,7 @@
     }
 
     @media (max-width: 576px) {
-      .footer-logo {
+.footer-logo {
         margin: 0 auto 15px;
       }
       .subscription-form {
@@ -2216,4 +2228,427 @@
       .company-li li{
         margin-left:0px;
       }
+      .director-img{
+        width:330px;
+
+      }
+    }
+
+    /* =====================================================
+   =========== RESPONSIVENESS (Mobile & Tablet) =========
+   ===================================================== */
+
+/* ===== Tablets (≤1024px) ===== */
+@media (max-width: 1024px) {
+  .about-content h1 {
+    font-size: 2rem;
+  }
+
+  .expert-coaching h1 {
+    font-size: 1.7rem;
+  }
+
+  .lead-card {
+    margin-bottom: 30px;
+  }
+
+  .stats-box {
+    padding: 20px;
+  }
+
+  .stat-card1 h3 {
+    font-size: 1.6rem;
+  }
+}
+
+/* ===== Mobile (≤768px) ===== */
+@media (max-width: 768px) {
+  /* Global */
+  h1, h2, h3 {
+    text-align: center;
+  }
+  /* body{
+    width:100%;
+    overflow-x:hidden;
+  } */
+
+  p {
+    text-align: justify;
+  }
+
+  /* .about-header {
+    height: 50vh;
+    padding: 0 20px;
+  } */
+
+  .about-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .about-content h1 {
+    font-size: 1.8rem;
+  }
+
+  /* Story */
+  .row {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .director-img {
+    margin-top: 25px;
+  }
+
+  /* Stats */
+  .stats-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Coaching Section */
+  .tab-btn {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .coaching-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Expert Coaching */
+  .expert-coaching {
+    flex-direction: column !important;
+  }
+
+  .expert-coaching-img {
+    margin-top: 30px;
+    text-align: center;
+    width:330px;
+  }
+
+  /* Leadership */
+  .lead-card {
+    margin-bottom: 25px;
+  }
+
+  .lead-card img {
+    max-width: 150px;
+  }
+
+  /* Why Bansal */
+  .bansal-left {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .bansal-right img {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  /* Buttons */
+  .btn, .black-btn {
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+
+  /* Container */
+  
+  .our-mission img{
+    width:320px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+
+/* gallery page */
+/* ✅ Tablet: 2 or 3 per row */
+@media (max-width: 992px) {
+  .gallery-page .cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ✅ Small tablet */
+@media (max-width: 768px) {
+  .gallery-page .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-page .tabs {
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 5px;
+  }
+}
+
+/* ✅ Mobile single column */
+@media (max-width: 480px) {
+  .gallery-page .cards-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr); /* or 4 if you want */
+  max-width: 1100px;       /* ✅ limits width */
+  margin: 0 auto;          /* ✅ centers container */
+  justify-items: center;   /* ✅ centers cards inside */
+  }
+
+  .gallery-page .gallery-card img {
+    height: 180px;
+  }
+}
+
+
+/* boast page */
+
+.boost-section {
+  position: relative;
+  background: url('./Images/backgroundbanner.jpg') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+}
+
+/* Blue overlay */
+.boost-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 120, 198, 0.8);
+  z-index: 1;
+}
+
+/* Ensure text and form are above overlay */
+.boost-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Form Styling */
+.boost-form {
+  background-color: rgba(0, 150, 255, 0.9);
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.3);
+}
+
+.boost-form .form-control {
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+
+.boost-form button {
+  border-radius: 25px;
+}
+
+/* Modern dropdown styling */
+.custom-select {
+  position: relative;
+}
+
+.custom-select select {
+  width: 100%;
+  appearance: none;
+  background-color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 16px;
+  font-size: 15px;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.custom-select select:hover,
+.custom-select select:focus {
+  box-shadow: 0 0 0 2px #007bff;
+}
+
+/* Add custom dropdown arrow */
+.custom-select::after {
+  content: "▼";
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #007bff;
+  pointer-events: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .boost-section {
+    text-align: center;
+    padding: 90px 20px;
+  }
+
+  .boost-form {
+    margin-top: 20px;
+  }
+  .result-neet img{
+    margin-bottom:20px;
+  }
+  .footer-bottom{
+    padding:20px;
+  }
+}
+
+
+/* table section */
+ .section-title {
+      font-weight: 600;
+      font-size: 24px;
+    }
+
+    .subtitle {
+      color:black;
+      margin-bottom: 25px;
+      font-size:23px;
+    }
+
+    .progress {
+      height: 32px !important;
+      border-radius: 20px !important;
+      margin-bottom: 10px;
+    }
+
+    .progress-bar {
+      background-color: #007bff;
+      border-radius:20px;
+    }
+
+    .info-text {
+      font-size: 23px;
+      margin-bottom: 40px;
+    }
+
+    .benefit-card {
+      background: #fff;
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.5);
+      border-radius: 20px;
+      text-align: center;
+      padding: 25px 15px;
+      transition: all 0.3s ease;
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-5px);
+    }
+    .benefit-card h3{
+      font-weight:600;
+    }
+    .benefit-icon {
+      height: 80px;
+      width: 80px;
+      background: #007bff;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+
+    .benefit-card h5 {
+      font-weight: 600;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .benefit-card p {
+      font-size: 16px;
+      color:black;
+      margin: 0;
+    }
+
+    .cash-title {
+      margin-top: 50px;
+      font-weight: 600;
+      font-size: 24px;
+    }
+
+    .subtitle {
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .table {
+      border: 2px solid black;
+      text-align: center;
+      margin-top: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+     
+    }
+
+    .table th {
+      background-color: #f8f8f8;
+      font-weight: 600;
+      border: 1px solid black;
+    }
+
+    .table td {
+      vertical-align: middle;
+      padding: 12px;
+      border: 1px solid black;
+      
+    }
+ 
+     
+
+    /* 🔵 BLUE ROW STYLING */
+   /* .table td.tr1 {
+      background-color: #0096FF !important;
+      color: #fff !important;
+    } */
+
+    /* For non-blue rows */
+    tr:not(.tr1) {
+      background-color: #fff;
+      color: #000;
+    }
+
+    @media (max-width: 767px) {
+      .cash-title {
+        font-size: 20px;
+      }
+
+      .table td, .table th {
+        font-size: 14px;
+        padding: 8px;
+      }
+    }
+/* Make it clean on mobile */
+@media (max-width: 767px) {
+  .cash-title {
+    font-size: 20px;
+  }
+  .table td, .table th {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+    @media (max-width: 767px) {
+      .benefit-card {
+        margin-bottom: 20px;
+      }
+
+      .section-title, .cash-title {
+        font-size: 20px;
+      }
+    }
+
+
+    .result-neet{
+      background-color: #0094ff;
     }
